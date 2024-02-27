@@ -1,0 +1,149 @@
+
+let chaos=0;
+let thisok=0;
+let rotater=0;
+const chaosmode=(event)=>{
+	console.log(event.code);
+	if (event.code==="KeyC")
+	{
+		//console.log("chaos mode on");
+		chaos=1-chaos;
+
+	}
+}
+
+function random_color(element)
+{let colors=['red','purple','blue','green','lime','orange','pink','yellow','gray']
+let number=Math.floor(Math.random()*colors.length)
+	element.style.color=colors[number]
+}
+
+function itsablackout()
+{
+	blackout=document.createElement('blackout');
+	blackout.style.backgroundColor='black';
+	const style=window.getComputedStyle(blackout);
+	
+	blackout.style.height=100+'%'
+	blackout.style.width=100+'%'
+	blackout.style.position='absolute'
+	blackout.style.display='flex'
+	blackout.style.zIndex='1000'
+	blackout.style.top='0'
+	blackout.style.left='0'
+	console.log(style);
+	switch(thisok){
+	case '1':
+	document.body.appendChild(blackout)
+	case '0':
+	blackout.remove()
+	}
+
+	thisok=1-thisok
+}
+
+function itsblackout()
+{
+	blackout=document.createElement('blackout');
+	blackout.style.backgroundColor='black';
+	const style=window.getComputedStyle(blackout);
+	
+	blackout.style.height=100+'%'
+	blackout.style.width=100+'%'
+	blackout.style.position='absolute'
+	blackout.style.display='flex'
+	blackout.style.flexDirection='column'
+	blackout.style.alignItems='center'
+	blackout.style.justifyContent='center'
+	blackout.style.zIndex='1000'
+	blackout.style.top='0'
+	blackout.style.left='0'
+	console.log(style);
+	document.body.appendChild(blackout)
+	
+	sadface=document.createElement('img')
+	sadface.src='./icons/Sad_face.png'
+	sadface.style.height=100+'px'
+	sadface.style.width=100+'px'
+	blackout.append(sadface)
+	h2=document.createElement('h2')
+	h2.innerText='Oops! You caused a blackout!'
+	h2.classList.add('warning')
+	blackout.appendChild(h2)
+	
+}
+
+const rotate=(event)=>{
+	
+	event.target.style.animation='spin 2s linear'
+	//console.log('click');
+	//setInterval(switcher(event.target),2200)
+	const cod=setInterval(()=>{console.log('in interval'); event.target.style.animation='spin 2s linear'; },2020)
+	setInterval(()=>{clearInterval(cod)},6060)
+}
+
+function random_font(element)
+{let fonts=['Times, Times New Roman, serif','OCR A Std, monospace','Brush Script MT, Brush Script Std, cursive']
+	element.style.fontFamily=fonts[Math.floor(Math.random()*fonts.length)];
+	
+	rng=Math.floor(Math.random()*10)
+	if (rng===10)
+		element.innerText="OOGA BOOGA"
+	
+}
+
+function switcher(element)
+{
+	console.log('in switcher')
+	element.style.animation='spin 2s linear';
+}
+//RETINE CLAMP!
+const random_bullshit_go=(event)=>{
+	if (event.code==="KeyQ" && chaos===1)
+	{
+		//console.log(event.code);
+		whatlist=document.getElementsByClassName("whattext")
+		console.log(whatlist);
+		for (let i=0;i<whatlist.length;i++)
+			whatlist[i].style.color=random_color(whatlist[i])
+	}
+	if (event.code==="KeyB" && chaos===1)
+	{console.log(thisok)
+		if (thisok===0)
+		{
+			itsblackout()
+			thisok=1
+		}
+		else
+		{
+			thisok=0
+			blackout.remove()
+		}
+	}
+	if (event.code==="KeyS" && chaos===1)
+	{console.log(rotater)
+		if (rotater===0)
+		{
+			window.addEventListener('click',rotate);
+			rotater=1;
+		}
+		else
+		{
+			rotater=0;
+			window.removeEventListener('click',rotate);
+		}
+	}
+	if (event.code==="ArrowRight" && chaos===1)
+	{
+		h2=document.querySelectorAll('h2');
+		console.log(h2);
+		for (let i=0;i<h2.length;i++)
+			random_font(h2[i])
+	}
+}
+
+window.onload=()=>{
+	console.log("I have been born!")
+	window.addEventListener('keydown',chaosmode);
+	window.addEventListener('keydown',random_bullshit_go);
+}
