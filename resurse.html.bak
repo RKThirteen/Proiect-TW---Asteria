@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Asteria </title>
+	<meta name="charset" content="UTF-8">
+	<meta name="author" content="Barbu Eduard(RK13)">
+	<meta name="description" content="This part of the website shows things taken from the internet and thanks to the people who helped me get here right now">
+	<meta name="keywords" content="resources,thanks,credits">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+	<link rel="icon" href="./asteria-logo-bnw.png"> 
+	<script src="./avatar.js">
+	</script>
+</head>
+<body>
+	<header id="starheader">
+		<div class="nvbr">
+			<div id="character"></div>
+			<img class="logo" src="./asteria-logo.png" alt="Logo">
+			<nav id="navigation">
+				<ul>
+					<li>
+						<a class="active" href="./index.html">Home</a>
+					</li>
+					<li>
+						<a href="./what-is-asteria.html">What is This Place?</a>
+					</li>
+					<li class="hover">
+						<a>Art</a>
+						<ul class="dropdown">
+							<li>
+								<a class="active" href="./art.html#recent"> Recent</a>
+							</li>
+							<li>
+								<a href="./art.html#favourites"> Favourites</a>
+							</li>
+							<li>
+								<a href="./art.html#old"> Ye Olde Days </a>
+							</li>
+							<li>
+								<a href="./art.html#dev"> In Development</a>
+							</li>
+						</ul>
+					</li>
+					<li class="hover">
+						<a>Our Pictures</a>
+						<ul class="dropdown">
+								<li>
+									<a class="active" href="./our-pictures.html#gallery1"> 1up!</a>
+								</li><li>
+									<a href="./our-pictures.html#gallery2"> Old Friends</a>
+								</li><li>
+									<a href="./our-pictures.html#gallery3"> Funny </a>
+								</li><li>
+									<a href="./art.html#gallery4"> With love </a>
+								</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<section id="goexplore">
+			<h2>Resources</h2>
+		</section>
+	</header>
+	<main class="resourcemain">
+		<section id="credits">
+			<h3> Credits! </h3>
+				<p class="whattext">Background Image by: Lovepik</p>
+				<p class="whattext">Audio: oneheart-watching the stars </p>
+				<p class="tiny"> side-note: If you haven't heard any music...it means you didn't search hard enough!</p>
+				<p class="whattext">Claudia Elena Chirita-my course teacher</p>
+				<p class="whattext"> -my lab teacher, for guiding us through exercises ,showing us "ceva smecher" and being a fun teacher </p>
+				<p class="whattext"> And, of course...</p>
+				<p class="special"> <a href="./hidden.html">friends</a> who always make me smile and feel loved and at home</p>
+		</section>
+	</main>
+	<footer>
+		<div class="socialmedia">
+			<a href="#l1" class="ig"> Instagram </a>
+			<a href="#l1" class="fb"> Facebook </a>
+			<a href="#l1" class="twt"> Twitter </a>
+		</div>
+		<div class="copyright">
+			<p class="tiny"> Copyright 2023-2023 Student, Universitatea Bucuresti, Facultatea de Matematica si Informatica</p>
+			<p class="tiny"> Toate Drepturile Rezervate </p>
+			<p class="tiny"> Termeni si Conditii</p>
+			<p class="tiny"> <a class="active" href="./resurse.html"> Resurse</a></p>
+		</div>
+	</footer>
+</body>
+</html>

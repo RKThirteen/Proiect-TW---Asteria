@@ -1,0 +1,318 @@
+:root
+{
+	--bg-color:#d8d0c5;
+	--bg-color2:purple;
+	--def-padding:25px;
+	--color-b1:#1f1f1f;
+	--color-w1:#edf0f1;
+	--color-purp1:#4c0154;
+	--color-purp2:#8102b0;
+	--color-purp3:#5c017d;
+	--color-bl1:#082657;
+	--color-bl2:#031b42;
+	--color-bl3:#011433;
+	--color-bl4:#00122e;
+}
+
+.star-audio{
+	opacity:0.4;
+	background-color:red;
+}
+
+header#starheader{
+	min-height:100vh;
+	width:100%;
+	position:relative;
+	display:flex;
+	flex-direction:column;
+}
+
+html{
+	background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(./2799006.jpg);
+	background-size:cover;
+	scroll-behavior: smooth;
+	min-width:100px;
+	height:auto;
+}
+
+.starcontainer{
+	margin-top:10%;
+	display:grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns:1fr 1fr;
+}
+
+.star{
+	position:absolute;
+	top:50%;
+	left:50%;
+	height:4px;
+	width:100px;
+	background:linear-gradient(-45deg,#5F91FF,rgba(0,0,255,0));
+	border-radius:150px;
+	filter:drop-shadow(0 0 6px #699BFF);
+	animation:starfall 4s ease-in-out infinite,
+			  trail 4s ease-in-out infinite;
+}
+
+@keyframes starfall{
+	0%{
+		transform:translateX(0);
+	}
+	100%{
+		transform:translateX(400px);
+	}
+}
+
+@keyframes trail{
+	0%{
+		width:0px;
+	}
+	30%{
+		width:100px;
+	}
+	100%{
+		width:0px;
+	}
+}
+
+.star::before,
+.star::after{
+	content:'';
+	position:absolute;
+	top:calc(50% - 2px);
+	right:0;
+	height:4px;
+	width:20px;
+	background:linear-gradient(-45deg,#5F91FF,rgba(0,0,255,0));
+	border-radius:150px;
+	transform:translateX(50%) rotateZ(45deg);
+	animation:shine 4s ease-in-out infinite;
+}
+@keyframes shine{
+	0%{
+		width:0px;
+	}
+	50%{
+		width:20px;
+	}
+	100%{
+		width:0px;
+	}
+}
+
+.star::after{
+	transform:translateX(50%) rotateZ(-45deg);
+}
+
+.star:nth-child(1)
+{
+	top:calc(50% - 50px);
+	left:calc(50% - 100px);
+	animation-delay:2s;
+}
+.star:nth-child(1)::before,
+.star:nth-child(1)::after{
+	animation-delay:2s;
+}
+
+.star:nth-child(2)
+{
+	top:calc(50% + 50px);
+	left:calc(50% - 100px);
+	animation-delay:2.5s;
+}
+.star:nth-child(2)::before,
+.star:nth-child(2)::after{
+	animation-delay:2.5s;
+}
+
+.star:nth-child(3)
+{
+	top:calc(50% - 100px);
+	left:calc(50% - 250px);
+	animation-delay:3s;
+}
+.star:nth-child(3)::before,
+.star:nth-child(3)::after{
+	animation-delay:3s;
+}
+
+.star:nth-child(4)
+{
+	top:calc(50% + 100px);
+	left:calc(50% - 250px);
+	animation-delay:3.5s;
+}
+.star:nth-child(4)::before,
+.star:nth-child(4)::after{
+	animation-delay:3.5s;
+}
+.star:nth-child(5)
+{
+	animation-delay:4s;
+}
+.star:nth-child(5)::before,
+.star:nth-child(5)::after{
+	animation-delay:4s;
+}
+
+.star:nth-child(6)
+{
+	top:calc(50% - 150px);
+	left:calc(50% - 250px);
+	animation-delay:1.7s;
+}
+.star:nth-child(6)::before,
+.star:nth-child(6)::after{
+	animation-delay:1.7s;
+}
+
+.star:nth-child(7)
+{
+	top:calc(50% + 150px);
+	left:calc(50% - 250px);
+	animation-delay:0.5s;
+}
+.star:nth-child(7)::before,
+.star:nth-child(7)::after{
+	animation-delay:0.5s;
+}
+
+.starsky{
+	width:50vw;
+	height:30vh;
+	overflow:hidden;
+	transform:rotateZ(45deg);
+	opacity:1;
+}
+
+@media screen and (max-width:300px){
+	.starcontainer{
+		display:block;
+		position:relative;
+	}
+}
+
+.starsky:nth-of-type(2){
+	transform:rotateZ(135deg);
+
+}
+.starsky:nth-of-type(3){
+	transform:rotateZ(45deg);
+
+}
+.starsky:nth-of-type(4){
+	transform:rotateZ(135deg);
+
+}
+
+label{
+	transition:0.4s;
+}
+
+label:hover{
+	color:blue;
+	cursor:pointer;
+}
+
+#finalthanks{
+	text-align:center;
+}
+#finalthanks h2{
+	position:relative;
+	top:10%;
+}
+
+input:checked .starsky{
+	border:10px solid green;
+}
+
+input:checked{
+	    border: none;
+    outline: 2px solid deeppink;
+}
+#finalthanks p{
+	opacity:1;
+}
+#finalthanks>h2{
+	animation:AppearIntroMax 2s 1.5s linear,
+			  FloatNGlow 6s 4s linear infinite;
+	animation-fill-mode:forwards;
+}
+@media screen and (max-width:200px){
+	#finalthanks>h2{
+		font-size:1.5rem;
+		animation:none;
+		opacity:1;
+	}
+}
+@media (prefers-reduced-motion){
+	#finalthanks>h2{
+		animation:AppearIntroMaxReduced 2s 1.5s linear,
+			  FloatNGlowReduced 6s 4s linear infinite;
+	}
+}
+@keyframes FloatNGlow
+{
+	0%{
+		transform:translateY(0);
+	}
+	12.5%{
+		opacity:0.5;
+		transform:translateY(5px);
+		text-shadow:#51558c 1px 0 10px;
+	}
+	25%{
+		text-shadow:#FFF 1px 0 10px;
+		transform:translateY(10px);
+	}
+	37.5%{
+		transform:translateY(15px);
+		text-shadow:#51558c 1px 0 10px;
+	}
+	50%{
+		transform:translateY(20px);
+		text-shadow:#FFF 1px 0 10px;
+		opacity:1;
+	}
+	62.5%{
+		text-shadow:#51558c 1px 0 10px;
+		transform:translateY(15px);
+	}
+	75%{
+		transform:translateY(10px);
+		text-shadow:#FFF 1px 0 10px;
+	}
+	87.5%{
+		text-shadow:#51558c 1px 0 10px;
+		transform:translateY(5px);
+	}
+	100%{
+		transform:translateY(0);
+	}
+}
+
+@keyframes FloatNGlowReduced
+{
+	0%{
+		text-shadow:none;
+	}
+	25%{
+		text-shadow:#f5f5f5 1px 0 10px;
+	}
+	50%{
+		text-shadow:#FFF 1px 0 10px;
+	}
+	75%{
+		text-shadow:#f5f5f5 1px 0 10px;
+	}
+	100%{
+	}
+}
+#starfooter{
+	margin-top:15%;
+}
+/*remaining tasks:
+Comete?
+Label sa pornesti/opresti stelele si cometa

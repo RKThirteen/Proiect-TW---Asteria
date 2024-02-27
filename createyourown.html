@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Asteria </title>
+	<meta name="charset" content="UTF-8">
+	<meta name="author" content="Barbu Eduard(RK13)">
+	<meta name="description" content="The front page of the website. Built with a lot of sweat and tears, this is the very first page i started making">
+	<meta name="keywords" content="art,friends,gallery">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="icon" href="./asteria-logo-bnw.png"> 
+	<script src="./avatar.js">
+	</script>
+</head>
+<body>
+	<header>
+		<div id="character"></div>
+		<h2 style="text-align: center;">Create your Avatar!</h2>
+		<form class="formtainer">
+		<label for="nume" class="whattext"> Username: </label>
+			<input type="text" name="nume" id="nume" pattern="[a-zA-Z0-9]+" size="40" minlength="3" maxlength="30" required>
+		<label for="password" class="whattext"> Password: </label>
+			<input type="text" name="password" id="password" pattern="[a-zA-Z0-9]+[!@#$%^&*~`[]\';/.,']+[a-zA-Z0-9]*[0-9]{2}" size="40" minlength="3" maxlength="30" required>
+		<label class="whattext" for="hair"> Hair color: </label>
+			<input type="color" id="hair" name="hair">
+		<label class="whattext" for="skin"> Skin color:</label>
+			<input type="color" id="skin" name="skin">
+		<label class="whattext" for="eyes"> Eye color:</label>
+			<input type="color" id="eyes" name="eyes">
+		<label class="whattext" for="shirt"> Shirt color:</label>
+			<input type="color" id="shirt" name="shirt">
+		<label class="whattext" for="pants"> Jeans color:</label>
+			<input type="color" id="pants" name="pants">
+		<label class="whattext" for="shoes"> Shoes color:</label>
+			<input type="color" id="shoes" name="shoes">
+		<label class='whattext' for="age">Age:</label>
+			<input type="number" id="age" name="age" min="1" max="100">
+		<label class="whattext" for="face">Face Type</label>
+			<input type="range" id="face" name="face" min="1" max="3">
+			<input type="submit" value="Save Character" id="submit"></button>
+		</form>
+		<canvas id="canvas" width="1000px" height="auto"></canvas>
+	</header>
+</main>
+<footer>
+	<div class="socialmedia">
+			<a href="#l1" class="ig"> Instagram </a>
+			<a href="#l1" class="fb"> Facebook </a>
+			<a href="#l1" class="twt"> Twitter </a>
+		</div>
+	<div class="copyright">
+		<p class="tiny"> Copyright 2023-2023 Student, Universitatea Bucuresti, Facultatea de Matematica si Informatica</p>
+		<p class="tiny"> Toate Drepturile Rezervate </p>
+		<p class="tiny"> Termeni si Conditii</p>
+		<p class="tiny"> <a href="./resurse.html"> Resurse</a></p>
+	</div>
+</footer>
+</body>
+</html>
